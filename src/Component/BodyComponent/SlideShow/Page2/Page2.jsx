@@ -50,7 +50,7 @@ function Page2() {
         <Slider {...settings}>
           {images.map((image, index) => (
             <div key={index} className="slide-item">
-              <div className="overlay">
+              <div className="overlay-p2">
                 <span style={{ margin: "auto" }}>Đến trang</span>
               </div>
               <img src={image} alt={`Slide ${index + 1}`} className="image" />
