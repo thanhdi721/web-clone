@@ -1,0 +1,43 @@
+.slider-container {
+  text-align: center;
+}
+
+.image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.3s ease;
+  margin: auto;
+}
+
+.image:hover {
+  transform: scale(1.1); /* Kích thước tăng lên khi hover */
+}
+
+.slide-item {
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+  overflow: hidden; /* Ẩn phần ngoài của overlay */
+  text-align: center; /* Căn chỉnh ảnh giữa */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 28%;
+  width: 39%;
+  height: 85%;
+  background-color: rgba(36, 10, 207, 0.7); /* Màu xanh đè lên */
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.slide-item:hover .overlay {
+  opacity: 1;
+}
