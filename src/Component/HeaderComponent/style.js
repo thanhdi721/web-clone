@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const WrapperButtonHeader = styled.button`
+export const WrapperButtonHeader = styled.div`
   background: transparent;
   position: relative;
   padding: 5px 15px;
@@ -17,6 +17,7 @@ export const WrapperButtonHeader = styled.button`
   color: #003da5;
   transition: color 0.3s 0.1s ease-out;
   text-align: center;
+  width: 120px;
 
   span {
     margin: 10px;

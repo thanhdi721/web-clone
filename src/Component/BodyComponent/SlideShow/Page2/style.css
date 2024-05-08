@@ -41,3 +41,65 @@
 .slide-item:hover .overlay {
   opacity: 1;
 }
+.btn-p2 {
+  margin: 150px auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  background: #f9f9fa;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(3, 0, 78, 0.2);
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #0c008e33;
+}
+
+.btn-p2:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: #0e00a6;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
+
+.btn-p2:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+.btn-p2 span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 18px 25px;
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-p2:hover span {
+  color: #ffff !important;
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

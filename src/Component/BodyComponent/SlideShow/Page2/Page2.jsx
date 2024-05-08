@@ -46,7 +46,7 @@ function Page2() {
     <div style={{ marginTop: "20px" }}>
       <WrapperTitle>CÁC NHÃN HÀNG CỦA CHÚNG TÔI</WrapperTitle>
       <WrapperTitle_2>Các sản phẩm giúp cuộc sống dễ dàng hơn</WrapperTitle_2>
-      <div className="slider-container" style={{ marginTop: "20px" }}>
+      <div className="slider-container" style={{ marginTop: "100px" }}>
         <Slider {...settings}>
           {images.map((image, index) => (
             <div key={index} className="slide-item">
@@ -58,6 +58,11 @@ function Page2() {
           ))}
         </Slider>
       </div>
+      <button className="btn-p2">
+        <span style={{ fontSize: "16px", color: "#003da5" }}>
+          Xem các thương hiệu mang tính biểu tượng của chúng tôi
+        </span>
+      </button>
     </div>
   );
 }

@@ -7,6 +7,7 @@ export const WrapperTitle = styled.div`
   text-align: center;
 `;
 export const WrapperTitle_2 = styled.div`
+  margin-top: 20px;
   font-size: 3rem;
   font-weight: 800;
   color: #003da5;
