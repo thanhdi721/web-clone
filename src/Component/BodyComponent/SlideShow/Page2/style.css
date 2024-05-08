@@ -23,7 +23,7 @@
   text-align: center; /* Căn chỉnh ảnh giữa */
 }
 
-.overlay_page-2 {
+.overlayPage2:hover {
   position: absolute;
   top: 0;
   left: 28% !important;
@@ -35,7 +35,7 @@
   border-radius: 50%;
   opacity: 0;
   transition: opacity 0.3s ease;
-  z-index: 2;
+  z-index: 99;
 }
 
 .slide-item:hover .overlay {
