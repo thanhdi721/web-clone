@@ -23,7 +23,7 @@
   text-align: center; /* Căn chỉnh ảnh giữa */
 }
 
-.overlayPage2:hover {
+.overlay {
   position: absolute;
   top: 0;
   left: 28% !important;
