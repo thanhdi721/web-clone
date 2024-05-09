@@ -13,7 +13,7 @@ function Page3() {
   }, []);
 
   return (
-    <Row style={{ marginTop: "20px", overflow: "hidden" }}>
+    <Row style={{ marginTop: "20px", overflow: "hidden", height: "550px" }}>
       <Col span={24}>
         <div
           style={{
@@ -26,23 +26,24 @@ function Page3() {
           }}
         >
           <Row>
-            <Col span={10}>
+            <Col span={9}>
               <img
                 src="https://images.ctfassets.net/ywowj8d94i8y/5XvB2uo4vZKRNevfn0nReB/fdf6d88fabc8d94d04bdbd11fcb47921/1.10.23_Sustainability_Page_Key_Image_-_Mom_and_baby__2HP.jpg?fm=webp"
                 alt=""
                 style={{
                   borderRadius: "300px",
-                  height: "90%",
+                  height: "120%",
+                  width: "1000px",
                   objectFit: "cover",
                 }}
               />
             </Col>
-            <Col span={14} style={{ position: "relative" }}>
+            <Col span={15} style={{ position: "relative" }}>
               <div
                 style={{
                   backgroundColor: " rgba(36, 10, 207, 1)", // Màu xanh đè lên với độ trong suốt 50%
-                  width: "45%", // Chiều rộng overlay
-                  height: "90%", // Chiều cao overlay
+                  width: "750px", // Chiều rộng overlay
+                  height: "120%", // Chiều cao overlay
                   position: "absolute",
                   top: "0",
                   left: "0",
@@ -73,8 +74,9 @@ function Page3() {
                 src="https://images.ctfassets.net/ywowj8d94i8y/5XvB2uo4vZKRNevfn0nReB/fdf6d88fabc8d94d04bdbd11fcb47921/1.10.23_Sustainability_Page_Key_Image_-_Mom_and_baby__2HP.jpg?fm=webp"
                 alt=""
                 style={{
+                  width: "1000px",
                   borderRadius: "300px",
-                  height: "90%",
+                  height: "120%",
                   objectFit: "cover",
                   position: "relative",
                   zIndex: "0", // Đảm bảo hình ảnh hiển thị phía dưới overlay
