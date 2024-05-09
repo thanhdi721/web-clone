@@ -43,7 +43,7 @@ function Page2() {
     slidesToScroll: 1,
   };
   return (
-    <div style={{ marginTop: "20px" }}>
+    <div style={{ marginTop: "120px" }}>
       <WrapperTitle>CÁC NHÃN HÀNG CỦA CHÚNG TÔI</WrapperTitle>
       <WrapperTitle_2>Các sản phẩm giúp cuộc sống dễ dàng hơn</WrapperTitle_2>
       <div className="slider-container" style={{ marginTop: "100px" }}>

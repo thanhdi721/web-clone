@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const WrapperButtonHeader = styled.div`
   background: transparent;
-  position: relative;
+  position: relative !important;
   padding: 5px 15px;
   display: flex;
   align-items: center;
@@ -24,7 +24,7 @@ export const WrapperButtonHeader = styled.div`
   }
 
   &::before {
-    position: absolute;
+    position: absolute !important;
     top: 0;
     left: 0;
     right: 0;
@@ -51,7 +51,7 @@ export const WrapperLiHeader = styled.span`
   color: #003da5;
 `;
 export const WrapperSearchContainer = styled.div`
-  position: relative;
+  position: relative !important;
   width: 100px;
 `;
 export const WrapperSearchInput = styled.input`
@@ -66,7 +66,7 @@ export const WrapperSearchInput = styled.input`
   }
 `;
 export const WrapperSearchIcon = styled.span`
-  position: absolute;
+  position: absolute !important;
   top: 50%;
   left: 10px;
   transform: translateY(-50%);

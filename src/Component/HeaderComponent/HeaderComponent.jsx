@@ -56,7 +56,15 @@ function HeaderComponent() {
     },
   ];
   return (
-    <div>
+    <div
+      style={{
+        position: "fixed",
+        top: "0",
+        zIndex: "1000",
+        width: "100%",
+        backgroundColor: " rgba(0, 0, 0, 0.2)",
+      }}
+    >
       <Row style={{ padding: "20px" }}>
         <Col span={3}>
           <WrapperButtonHeader>
@@ -69,7 +77,7 @@ function HeaderComponent() {
             <span>Việt Nam</span>
           </WrapperButtonHeader>
         </Col>
-        <Col span={4} style={{ margin: "auto" }}>
+        <Col span={5} style={{ margin: "auto" }}>
           <Dropdown
             menu={{
               items,
@@ -86,7 +94,7 @@ function HeaderComponent() {
           </Dropdown>
         </Col>
 
-        <Col span={4} style={{ margin: "auto" }}>
+        <Col span={5} style={{ margin: "auto", marginLeft: "-10px" }}>
           <Dropdown
             menu={{
               items,
@@ -102,7 +110,7 @@ function HeaderComponent() {
             </a>
           </Dropdown>
         </Col>
-        <Col span={1} style={{ marginLeft: "20px", marginTop: "-12px" }}>
+        <Col span={1} style={{ position: "absolute", left: "50%" }}>
           <img
             src="https://images.ctfassets.net/ywowj8d94i8y/7znyJc3Y7SecEoKSYKWoaQ/1236329e586995b3dd96701a57a6fd33/P_G_Logo_RGB.svg"
             alt=""
@@ -126,7 +134,7 @@ function HeaderComponent() {
             </a>
           </Dropdown>
         </Col>
-        <Col span={6}>
+        <Col span={4}>
           <WrapperSearchContainer>
             <WrapperSearchIcon>&#128269;</WrapperSearchIcon>
             <WrapperSearchInput type="text" placeholder="Search..." />
