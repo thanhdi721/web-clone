@@ -5,7 +5,7 @@ import { WrapperButtonHeader } from "../HeaderComponent/style";
 function FooterComponent() {
   return (
     <div>
-      <div style={{ marginTop: "120px", overflow: "hidden" }}>
+      <div style={{ marginTop: "120px", overflow: "hidden", color: "#fff" }}>
         <div
           style={{
             height: "300px",

@@ -26,7 +26,7 @@ function Page3() {
           }}
         >
           <Row>
-            <Col span={9}>
+            <Col span={10}>
               <img
                 src="https://images.ctfassets.net/ywowj8d94i8y/5XvB2uo4vZKRNevfn0nReB/fdf6d88fabc8d94d04bdbd11fcb47921/1.10.23_Sustainability_Page_Key_Image_-_Mom_and_baby__2HP.jpg?fm=webp"
                 alt=""
@@ -37,7 +37,7 @@ function Page3() {
                 }}
               />
             </Col>
-            <Col span={15} style={{ position: "relative" }}>
+            <Col span={14} style={{ position: "relative" }}>
               <div
                 style={{
                   backgroundColor: " rgba(36, 10, 207, 1)", // Màu xanh đè lên với độ trong suốt 50%
