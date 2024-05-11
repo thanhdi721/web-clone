@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+/* Hiển thị giao diện PC cho các kích thước lớn hơn 1200px */
+.view-pc {
+  display: block;
+}
+
+/* Ẩn giao diện PC cho các kích thước nhỏ hơn hoặc bằng 1200px */
+@media (max-width: 1200px) {
+  .view-pc {
+    display: none;
+  }
+}
+
+/* Hiển thị giao diện mobile cho các kích thước nhỏ hơn hoặc bằng 1200px */
+.view-mobile {
+  display: none;
+}
+
+/* Hiển thị giao diện mobile cho các kích thước nhỏ hơn hoặc bằng 1200px */
+@media (max-width: 1200px) {
+  .view-mobile {
+    display: block;
+  }
+}

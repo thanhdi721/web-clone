@@ -7,6 +7,7 @@ function FooterComponent() {
     <div>
       <div style={{ marginTop: "120px", overflow: "hidden", color: "#fff" }}>
         <div
+          className="h-mobile"
           style={{
             height: "300px",
             backgroundColor: "#003da5",
@@ -17,10 +18,16 @@ function FooterComponent() {
             <span>Quay trở về đầu tiên</span>
             <span></span>
           </button>
-          <Row>
+          <Row className="v-mobile">
             <Col span={6}>
-              <ul style={{ listStyleType: "none", fontWeight: "500" }}>
-                <li>
+              <ul
+                className="w-mobile"
+                style={{
+                  listStyleType: "none",
+                  fontWeight: "500",
+                }}
+              >
+                <li className="w-mobile">
                   <div>
                     <img
                       src="https://images.ctfassets.net/ywowj8d94i8y/1rAlAymnl2aqQGcaaaSaaU/307094433d93dd04ce14ee6274f8e715/icon-contact.svg"
@@ -51,7 +58,10 @@ function FooterComponent() {
               </ul>
             </Col>
             <Col span={4}>
-              <ul style={{ listStyleType: "none", fontWeight: "500" }}>
+              <ul
+                style={{ listStyleType: "none", fontWeight: "500" }}
+                className="w-mobile"
+              >
                 <li style={{ fontWeight: "700", fontSize: "16px" }}>
                   ĐỐI TÁC VÀ NHÀ ĐẦU TƯ
                 </li>
@@ -61,7 +71,10 @@ function FooterComponent() {
               </ul>
             </Col>
             <Col span={4}>
-              <ul style={{ listStyleType: "none", fontWeight: "500" }}>
+              <ul
+                style={{ listStyleType: "none", fontWeight: "500" }}
+                className="w-mobile"
+              >
                 <li style={{ fontWeight: "700", fontSize: "16px" }}>
                   CÔNG TY CHÚNG TÔI
                 </li>
@@ -74,13 +87,19 @@ function FooterComponent() {
               </ul>
             </Col>
             <Col span={4}>
-              <ul style={{ listStyleType: "none", fontWeight: "500" }}>
+              <ul
+                style={{ listStyleType: "none", fontWeight: "500" }}
+                className="w-mobile"
+              >
                 <li style={{ fontWeight: "700", fontSize: "16px" }}>HỮU ÍCH</li>
                 <li>Sơ đồ trang web</li>
               </ul>
             </Col>
             <Col span={6}>
-              <ul style={{ listStyleType: "none", fontWeight: "500" }}>
+              <ul
+                style={{ listStyleType: "none", fontWeight: "500" }}
+                className="w-mobile"
+              >
                 <li style={{ fontWeight: "700", fontSize: "16px" }}>
                   PHÁP LUẬT
                 </li>
@@ -90,8 +109,12 @@ function FooterComponent() {
               </ul>
             </Col>
           </Row>
-          <Row>
-            <Col span={10} style={{ paddingLeft: "50px" }}>
+          <Row className="ft-mobile">
+            <Col
+              span={10}
+              style={{ paddingLeft: "50px" }}
+              className="vn-mobile"
+            >
               <WrapperButtonHeader>
                 <img
                   src="https://images.ctfassets.net/ywowj8d94i8y/6nElpqZmzSe6OWgqaau6Ow/f959b38125f48691f803fb22fe5f47d1/GlobeSimple.svg"

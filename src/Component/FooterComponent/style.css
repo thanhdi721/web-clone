@@ -48,3 +48,21 @@
   height: 150px;
   opacity: 1;
 }
+@media (max-width: 1200px) {
+  .v-mobile {
+    display: block;
+  }
+  .h-mobile {
+    height: auto !important;
+    clip-path: ellipse(250vw 100% at 50% 100%) !important;
+  }
+  .w-mobile {
+    width: 300px !important;
+  }
+  .vn-mobile {
+    display: none;
+  }
+  .ft-mobile {
+    margin: 50px 0px;
+  }
+}

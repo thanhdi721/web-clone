@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   WrapperButtonHeader,
+  WrapperButtonSearch,
   WrapperLiHeader,
   WrapperSearchContainer,
   WrapperSearchIcon,
   WrapperSearchInput,
 } from "./style";
-import { DownOutlined, SmileOutlined } from "@ant-design/icons";
+import { DownOutlined, SmileOutlined, SearchOutlined } from "@ant-design/icons";
 import { Col, Dropdown, Row, Space } from "antd";
 function HeaderComponent() {
+  const [isInputVisible, setIsInputVisible] = useState(false);
+
+  const toggleInputVisibility = () => {
+    setIsInputVisible(!isInputVisible);
+  };
+
   const items = [
     {
       key: "1",
@@ -62,7 +69,7 @@ function HeaderComponent() {
         top: "0",
         zIndex: "1000",
         width: "100%",
-        backgroundColor: " rgba(0, 0, 0, 0.2)",
+        backgroundColor: " rgba(0, 0, 0, 0.8)",
       }}
     >
       <Row style={{ padding: "20px" }}>
@@ -134,11 +141,17 @@ function HeaderComponent() {
             </a>
           </Dropdown>
         </Col>
-        <Col span={4}>
-          <WrapperSearchContainer>
+        <Col span={4} style={{ display: "flex", position: "relative" }}>
+          {/* <WrapperSearchContainer>
             <WrapperSearchIcon>&#128269;</WrapperSearchIcon>
             <WrapperSearchInput type="text" placeholder="Search..." />
-          </WrapperSearchContainer>
+          </WrapperSearchContainer> */}
+          {isInputVisible && (
+            <input type="text" placeholder="Nhập từ khóa tìm kiếm" />
+          )}
+          <WrapperButtonSearch onClick={toggleInputVisibility}>
+            <SearchOutlined style={{ fontSize: "24px", marginLeft: "35px" }} />
+          </WrapperButtonSearch>
         </Col>
       </Row>
     </div>
