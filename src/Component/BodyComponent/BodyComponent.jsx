@@ -12,6 +12,7 @@ class Sidebar extends React.Component {
     super(props);
     this.state = {
       activeSection: null,
+      hoverSection: null,
     };
   }
 
@@ -21,39 +22,56 @@ class Sidebar extends React.Component {
     this.setState({ activeSection: sectionId });
   };
 
+  handleMouseEnter = (sectionId) => {
+    this.setState({ hoverSection: sectionId });
+  };
+
+  handleMouseLeave = () => {
+    this.setState({ hoverSection: null });
+  };
+
   render() {
     return (
       <div className="sidebar">
         <ul style={{ listStyleType: "none" }}>
-          <li key="slideShow" style={{ display: "flex" }}>
-            {this.state.activeSection === "slideShow" && (
-              <div
+          <li key="slideShow" style={{ display: "flex", position: "relative" }}>
+            <div
+              className="additional-info"
+              style={{
+                display:
+                  this.state.hoverSection === "slideShow" ||
+                  this.state.activeSection === "slideShow"
+                    ? "block"
+                    : "none",
+                position: "absolute",
+                left: "-140px",
+                top: "-20px",
+                backgroundColor: "#fff",
+                width: "200px",
+                borderRadius: "30px",
+                padding: "0.7rem 1rem",
+                zIndex: "1",
+              }}
+            >
+              <span
+                className="hp-scroll__nav__link"
+                aria-label="Giới thiệu"
                 style={{
-                  backgroundColor: "#fff",
-                  width: "120px",
-                  borderRadius: "30px",
-                  position: "absolute",
-                  left: "-110px",
-                  padding: "0.7rem 1rem",
-                  top: "0px",
+                  fontSize: "1rem",
+                  color: "#003da5",
+                  fontWeight: "700",
+                  lineHeight: "1.3",
+                  fontFamily: "Montserrat, Arial, sans-serif",
                 }}
               >
-                <span
-                  className="hp-scroll__nav__link"
-                  aria-label="Giới thiệu"
-                  style={{
-                    fontSize: "1rem",
-                    color: "#003da5",
-                    fontWeight: "700",
-                    lineHeight: "1.3",
-                    fontFamily: "Montserrat, Arial, sans-serif",
-                  }}
-                >
-                  Giới thiệu
-                </span>
-              </div>
-            )}
-            <div onClick={() => this.handleClick("slideShow")}>
+                Giới thiệu
+              </span>
+            </div>
+            <div
+              onClick={() => this.handleClick("slideShow")}
+              onMouseEnter={() => this.handleMouseEnter("slideShow")}
+              onMouseLeave={() => this.handleMouseLeave()}
+            >
               <FontAwesomeIcon
                 icon={faCircle}
                 className={
@@ -64,35 +82,44 @@ class Sidebar extends React.Component {
               />
             </div>
           </li>
-          <li key="page2" style={{ display: "flex" }}>
-            {this.state.activeSection === "page2" && (
-              <div
+          <li key="page2" style={{ display: "flex", position: "relative" }}>
+            <div
+              className="additional-info"
+              style={{
+                display:
+                  this.state.hoverSection === "page2" ||
+                  this.state.activeSection === "page2"
+                    ? "block"
+                    : "none",
+                position: "absolute",
+                left: "-190px",
+                top: "20px",
+                backgroundColor: "#fff",
+                width: "250px",
+                borderRadius: "30px",
+                padding: "0.7rem 1rem",
+                zIndex: "1",
+              }}
+            >
+              <span
+                className="hp-scroll__nav__link"
+                aria-label="Page 2"
                 style={{
-                  backgroundColor: "#fff",
-                  width: "150px",
-                  borderRadius: "30px",
-                  position: "absolute",
-                  left: "-140px",
-                  padding: "0.7rem 1rem",
-                  top: "40px",
+                  fontSize: "1rem",
+                  color: "#003da5",
+                  fontWeight: "700",
+                  lineHeight: "1.3",
+                  fontFamily: "Montserrat, Arial, sans-serif",
                 }}
               >
-                <span
-                  className="hp-scroll__nav__link"
-                  aria-label="Page 2"
-                  style={{
-                    fontSize: "1rem",
-                    color: "#003da5",
-                    fontWeight: "700",
-                    lineHeight: "1.3",
-                    fontFamily: "Montserrat, Arial, sans-serif",
-                  }}
-                >
-                  Cam kết & nổ lực
-                </span>
-              </div>
-            )}
-            <div onClick={() => this.handleClick("page2")}>
+                Cam kết & nổ lực
+              </span>
+            </div>
+            <div
+              onClick={() => this.handleClick("page2")}
+              onMouseEnter={() => this.handleMouseEnter("page2")}
+              onMouseLeave={() => this.handleMouseLeave()}
+            >
               <FontAwesomeIcon
                 icon={faCircle}
                 className={
@@ -101,35 +128,44 @@ class Sidebar extends React.Component {
               />
             </div>
           </li>
-          <li key="page3" style={{ display: "flex" }}>
-            {this.state.activeSection === "page3" && (
-              <div
+          <li key="page3" style={{ display: "flex", position: "relative" }}>
+            <div
+              className="additional-info"
+              style={{
+                display:
+                  this.state.hoverSection === "page3" ||
+                  this.state.activeSection === "page3"
+                    ? "block"
+                    : "none",
+                position: "absolute",
+                left: "-290px",
+                top: "60px",
+                backgroundColor: "#fff",
+                width: "320px",
+                borderRadius: "30px",
+                padding: "0.7rem 1rem",
+                zIndex: "1",
+              }}
+            >
+              <span
+                className="hp-scroll__nav__link"
+                aria-label="Page 3"
                 style={{
-                  backgroundColor: "#fff",
-                  width: "230px",
-                  borderRadius: "30px",
-                  position: "absolute",
-                  left: "-220px",
-                  padding: "0.7rem 1rem",
-                  top: "80px",
+                  fontSize: "1rem",
+                  color: "#003da5",
+                  fontWeight: "700",
+                  lineHeight: "1.3",
+                  fontFamily: "Montserrat, Arial, sans-serif",
                 }}
               >
-                <span
-                  className="hp-scroll__nav__link"
-                  aria-label="Page 3"
-                  style={{
-                    fontSize: "1rem",
-                    color: "#003da5",
-                    fontWeight: "700",
-                    lineHeight: "1.3",
-                    fontFamily: "Montserrat, Arial, sans-serif",
-                  }}
-                >
-                  Nổ lực phát triển bền vững
-                </span>
-              </div>
-            )}
-            <div onClick={() => this.handleClick("page3")}>
+                Nổ lực phát triển bền vững
+              </span>
+            </div>
+            <div
+              onClick={() => this.handleClick("page3")}
+              onMouseEnter={() => this.handleMouseEnter("page3")}
+              onMouseLeave={() => this.handleMouseLeave()}
+            >
               <FontAwesomeIcon
                 icon={faCircle}
                 className={
@@ -138,35 +174,44 @@ class Sidebar extends React.Component {
               />
             </div>
           </li>
-          <li key="page4" style={{ display: "flex" }}>
-            {this.state.activeSection === "page4" && (
-              <div
+          <li key="page4" style={{ display: "flex", position: "relative" }}>
+            <div
+              className="additional-info"
+              style={{
+                display:
+                  this.state.hoverSection === "page4" ||
+                  this.state.activeSection === "page4"
+                    ? "block"
+                    : "none",
+                position: "absolute",
+                left: "-240px",
+                top: "100px",
+                backgroundColor: "#fff",
+                width: "270px",
+                borderRadius: "30px",
+                padding: "0.7rem 1rem",
+                zIndex: "1",
+              }}
+            >
+              <span
+                className="hp-scroll__nav__link"
+                aria-label="Page 4"
                 style={{
-                  backgroundColor: "#fff",
-                  width: "200px",
-                  borderRadius: "30px",
-                  position: "absolute",
-                  left: "-190px",
-                  padding: "0.7rem 1rem",
-                  top: "120px",
+                  fontSize: "1rem",
+                  color: "#003da5",
+                  fontWeight: "700",
+                  lineHeight: "1.3",
+                  fontFamily: "Montserrat, Arial, sans-serif",
                 }}
               >
-                <span
-                  className="hp-scroll__nav__link"
-                  aria-label="Page 4"
-                  style={{
-                    fontSize: "1rem",
-                    color: "#003da5",
-                    fontWeight: "700",
-                    lineHeight: "1.3",
-                    fontFamily: "Montserrat, Arial, sans-serif",
-                  }}
-                >
-                  Các trang web của P&G
-                </span>
-              </div>
-            )}
-            <div onClick={() => this.handleClick("page4")}>
+                Các trang web của P&G
+              </span>
+            </div>
+            <div
+              onClick={() => this.handleClick("page4")}
+              onMouseEnter={() => this.handleMouseEnter("page4")}
+              onMouseLeave={() => this.handleMouseLeave()}
+            >
               <FontAwesomeIcon
                 icon={faCircle}
                 className={
