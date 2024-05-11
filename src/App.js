@@ -4,6 +4,7 @@ import BodyComponent from "./Component/BodyComponent/BodyComponent";
 import FooterComponent from "./Component/FooterComponent/FooterComponent";
 import HeaderMobileComponent from "./Component/HeaderMobileComponent/HeaderMobileComponent";
 import BodyMobileComponent from "./Component/BodyMobileComponent/BodyMobileComponent";
+import FooterMobileComponent from "./Component/FooterMobileComponent/FooterMobileComponent";
 function App() {
   return (
     <div>
@@ -16,7 +17,7 @@ function App() {
       <div className="view-mobile">
         <HeaderMobileComponent />
         <BodyMobileComponent />
-        <FooterComponent />
+        <FooterMobileComponent />
       </div>
     </div>
   );

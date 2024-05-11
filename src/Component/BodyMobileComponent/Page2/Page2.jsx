@@ -36,7 +36,7 @@ function Page2() {
   ];
   const settings = {
     infinite: true,
-    // autoplay: true,
+    autoplay: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -56,6 +56,11 @@ function Page2() {
           ))}
         </Slider>
       </div>
+      <button className="btn-p2mb">
+        <span style={{ fontSize: "16px" }}>
+          Xem các thương hiệu mang tính biểu tượng của chúng tôi
+        </span>
+      </button>
     </div>
   );
 }

@@ -1,8 +1,7 @@
-.animated-button_ft {
-  margin-top: 20px;
-  left: 45%;
-  position: relative;
-  display: inline-block;
+.animated-button_mb {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
   padding: 12px 24px;
   border: none;
   font-size: 16px;

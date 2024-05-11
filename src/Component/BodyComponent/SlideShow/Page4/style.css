@@ -49,6 +49,7 @@
   right: auto;
   left: 0;
   width: 100%;
+  background: #0e00a6;
 }
 
 .btn_p4 span {
@@ -64,7 +65,7 @@
 }
 
 .btn_p4:hover span {
-  color: #ffff !important;
+  color: #0e00a6 !important;
   animation: scaleUp 0.3s ease-in-out;
 }
 
