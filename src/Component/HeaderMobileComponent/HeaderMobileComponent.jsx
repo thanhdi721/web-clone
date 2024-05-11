@@ -108,6 +108,7 @@ function HeaderMobileComponent() {
             alt=""
             width={46}
             height={46}
+            style={{ marginTop: "-10px" }}
           />
         </Col>
         <Col span={11} style={{ textAlign: "end" }}>

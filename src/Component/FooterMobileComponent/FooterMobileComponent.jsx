@@ -30,6 +30,7 @@ function FooterMobileComponent() {
           <Row
             style={{
               fontWeight: "500",
+              marginTop: "20px",
             }}
           >
             <Col span={12} style={{ margin: "auto", textAlign: "center" }}>
