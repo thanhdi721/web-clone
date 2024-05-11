@@ -1,0 +1,39 @@
+.content {
+  flex: 1;
+}
+.sidebar ul li {
+  margin-bottom: 40px; /* Thay đổi giá trị tùy thích */
+}
+.sidebar {
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  display: block !important;
+  z-index: 999;
+}
+.dot {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  transition: all 0.3s ease;
+  color: #110dfd;
+  right: 10px;
+}
+
+.dot:hover {
+  transform: scale(1.5);
+}
+
+.dot.active {
+  position: fixed;
+  transform: scale(2);
+  right: 10px;
+}
+.hp-scroll__nav__item {
+  display: none;
+}
+
+.hp-scroll__nav__item.active {
+  display: block;
+}
