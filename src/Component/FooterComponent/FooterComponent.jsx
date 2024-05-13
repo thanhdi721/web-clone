@@ -5,11 +5,18 @@ import { WrapperButtonHeader } from "../HeaderComponent/style";
 function FooterComponent() {
   return (
     <div>
-      <div style={{ marginTop: "120px", overflow: "hidden", color: "#fff" }}>
+      <div
+        style={{
+          marginTop: "150px",
+          overflow: "hidden",
+          color: "#fff",
+          fontFamily: "Montserrat, Arial, sans-serif !important",
+        }}
+      >
         <div
           className="h-mobile"
           style={{
-            height: "300px",
+            height: "350px",
             backgroundColor: "#003da5",
             clipPath: "ellipse(118vw 100% at 50% 100%)",
           }}
@@ -59,52 +66,80 @@ function FooterComponent() {
             </Col>
             <Col span={4}>
               <ul
-                style={{ listStyleType: "none", fontWeight: "500" }}
+                style={{ listStyleType: "none", fontWeight: "400" }}
                 className="w-mobile"
               >
-                <li style={{ fontWeight: "700", fontSize: "16px" }}>
+                <li
+                  style={{
+                    fontWeight: "700",
+                    fontSize: "16px",
+                    marginBottom: "8px",
+                  }}
+                >
                   ĐỐI TÁC VÀ NHÀ ĐẦU TƯ
                 </li>
-                <li>Nhà đầu tư</li>
-                <li>Làm đối tác với chúng tôi</li>
+                <li style={{ marginBottom: "8px" }}>Nhà đầu tư</li>
+                <li style={{ marginBottom: "8px" }}>
+                  Làm đối tác với chúng tôi
+                </li>
                 <li>Nhà cung cấp</li>
               </ul>
             </Col>
             <Col span={4}>
               <ul
-                style={{ listStyleType: "none", fontWeight: "500" }}
+                style={{ listStyleType: "none", fontWeight: "400" }}
                 className="w-mobile"
               >
-                <li style={{ fontWeight: "700", fontSize: "16px" }}>
+                <li
+                  style={{
+                    fontWeight: "700",
+                    fontSize: "16px",
+                    marginBottom: "8px",
+                  }}
+                >
                   CÔNG TY CHÚNG TÔI
                 </li>
-                <li>Lãnh đạo</li>
-                <li>Cấu trúc & Quản trị</li>
-                <li>Chính sách & Thực hành</li>
-                <li>Lưu trữ</li>
-                <li>Giải thưởng & công nhận</li>
+                <li style={{ marginBottom: "8px" }}>Lãnh đạo</li>
+                <li style={{ marginBottom: "8px" }}>Cấu trúc & Quản trị</li>
+                <li style={{ marginBottom: "8px" }}>Chính sách & Thực hành</li>
+                <li style={{ marginBottom: "8px" }}>Lưu trữ</li>
+                <li style={{ marginBottom: "8px" }}>Giải thưởng & công nhận</li>
                 <li>Tin tức</li>
               </ul>
             </Col>
             <Col span={4}>
               <ul
-                style={{ listStyleType: "none", fontWeight: "500" }}
+                style={{ listStyleType: "none", fontWeight: "400" }}
                 className="w-mobile"
               >
-                <li style={{ fontWeight: "700", fontSize: "16px" }}>HỮU ÍCH</li>
+                <li
+                  style={{
+                    fontWeight: "700",
+                    fontSize: "16px",
+                    marginBottom: "8px",
+                  }}
+                >
+                  HỮU ÍCH
+                </li>
                 <li>Sơ đồ trang web</li>
               </ul>
             </Col>
             <Col span={6}>
               <ul
-                style={{ listStyleType: "none", fontWeight: "500" }}
+                style={{ listStyleType: "none", fontWeight: "400" }}
                 className="w-mobile"
               >
-                <li style={{ fontWeight: "700", fontSize: "16px" }}>
+                <li
+                  style={{
+                    fontWeight: "700",
+                    fontSize: "16px",
+                    marginBottom: "8px",
+                  }}
+                >
                   PHÁP LUẬT
                 </li>
-                <li>Thông báo bảo mật</li>
-                <li>Điều khoản & điều lệ</li>
+                <li style={{ marginBottom: "8px" }}>Thông báo bảo mật</li>
+                <li style={{ marginBottom: "8px" }}>Điều khoản & điều lệ</li>
                 <li>AdChoices</li>
               </ul>
             </Col>

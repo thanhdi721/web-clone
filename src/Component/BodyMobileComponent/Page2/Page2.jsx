@@ -44,7 +44,7 @@ function Page2() {
   return (
     <div>
       <WrapperTitle>Các Nhãn Hàng Của Chúng Tôi</WrapperTitle>
-      <div className="slider-container" style={{ marginTop: "50px" }}>
+      <div className="slider-container" style={{ marginTop: "120px" }}>
         <Slider {...settings}>
           {images.map((image, index) => (
             <div key={index} className="slide-item">

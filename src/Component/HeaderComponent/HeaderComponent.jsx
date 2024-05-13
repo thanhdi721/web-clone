@@ -69,10 +69,11 @@ function HeaderComponent() {
         top: "0",
         zIndex: "1000",
         width: "100%",
-        backgroundColor: " rgba(0, 0, 0, 0.8)",
+        backgroundColor: "hsla(0, 0%, 100%, .85)",
+        height: "70px",
       }}
     >
-      <Row style={{ padding: "20px" }}>
+      <Row style={{ padding: "10px" }}>
         <Col span={3}>
           <WrapperButtonHeader>
             <img

@@ -13,7 +13,7 @@ function Page3() {
   }, []);
 
   return (
-    <Row style={{ marginTop: "80px", overflow: "hidden", height: "550px" }}>
+    <Row style={{ marginTop: "200px", overflow: "hidden", height: "550px" }}>
       <Col span={24}>
         <div
           style={{

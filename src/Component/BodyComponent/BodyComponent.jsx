@@ -12,6 +12,7 @@ class Sidebar extends React.Component {
     super(props);
     this.state = {
       activeSection: null,
+      isHovered: null,
     };
   }
 
@@ -20,6 +21,36 @@ class Sidebar extends React.Component {
     section.scrollIntoView({ behavior: "smooth" });
     this.setState({ activeSection: sectionId });
   };
+
+  handleHover = (sectionId) => {
+    this.setState({ isHovered: sectionId });
+  };
+
+  handleScroll = () => {
+    const scrollPosition = window.scrollY;
+    const slideShow = document.getElementById("slideShow").offsetTop;
+    const page2 = document.getElementById("page2").offsetTop;
+    const page3 = document.getElementById("page3").offsetTop;
+    const page4 = document.getElementById("page4").offsetTop;
+
+    if (scrollPosition < page2) {
+      this.setState({ activeSection: "slideShow" });
+    } else if (scrollPosition >= page2 && scrollPosition < page3) {
+      this.setState({ activeSection: "page2" });
+    } else if (scrollPosition >= page3 && scrollPosition < page4) {
+      this.setState({ activeSection: "page3" });
+    } else {
+      this.setState({ activeSection: "page4" });
+    }
+  };
+
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
 
   render() {
     return (
@@ -53,7 +84,11 @@ class Sidebar extends React.Component {
                 </span>
               </div>
             )}
-            <div onClick={() => this.handleClick("slideShow")}>
+            <div
+              onClick={() => this.handleClick("slideShow")}
+              onMouseEnter={() => this.handleHover("slideShow")}
+              onMouseLeave={() => this.handleHover(null)}
+            >
               <FontAwesomeIcon
                 icon={faCircle}
                 className={
@@ -74,7 +109,7 @@ class Sidebar extends React.Component {
                   position: "absolute",
                   left: "-140px",
                   padding: "0.7rem 1rem",
-                  top: "40px",
+                  top: "50px",
                 }}
               >
                 <span
@@ -92,7 +127,11 @@ class Sidebar extends React.Component {
                 </span>
               </div>
             )}
-            <div onClick={() => this.handleClick("page2")}>
+            <div
+              onClick={() => this.handleClick("page2")}
+              onMouseEnter={() => this.handleHover("page2")}
+              onMouseLeave={() => this.handleHover(null)}
+            >
               <FontAwesomeIcon
                 icon={faCircle}
                 className={
@@ -111,7 +150,7 @@ class Sidebar extends React.Component {
                   position: "absolute",
                   left: "-220px",
                   padding: "0.7rem 1rem",
-                  top: "80px",
+                  top: "100px",
                 }}
               >
                 <span
@@ -129,7 +168,11 @@ class Sidebar extends React.Component {
                 </span>
               </div>
             )}
-            <div onClick={() => this.handleClick("page3")}>
+            <div
+              onClick={() => this.handleClick("page3")}
+              onMouseEnter={() => this.handleHover("page3")}
+              onMouseLeave={() => this.handleHover(null)}
+            >
               <FontAwesomeIcon
                 icon={faCircle}
                 className={
@@ -148,7 +191,7 @@ class Sidebar extends React.Component {
                   position: "absolute",
                   left: "-190px",
                   padding: "0.7rem 1rem",
-                  top: "120px",
+                  top: "150px",
                 }}
               >
                 <span
@@ -166,7 +209,11 @@ class Sidebar extends React.Component {
                 </span>
               </div>
             )}
-            <div onClick={() => this.handleClick("page4")}>
+            <div
+              onClick={() => this.handleClick("page4")}
+              onMouseEnter={() => this.handleHover("page4")}
+              onMouseLeave={() => this.handleHover(null)}
+            >
               <FontAwesomeIcon
                 icon={faCircle}
                 className={
@@ -176,6 +223,43 @@ class Sidebar extends React.Component {
             </div>
           </li>
         </ul>
+
+        {this.state.isHovered && (
+          <div className="hovered-title">
+            {this.state.isHovered === "slideShow" && (
+              <div
+                className="hovered-title"
+                style={{ left: "-100px", width: "110px" }}
+              >
+                <span>Giới thiệu</span>
+              </div>
+            )}
+            {this.state.isHovered === "page2" && (
+              <div
+                className="hovered-title"
+                style={{ left: "-140px", top: "50px", width: "150px" }}
+              >
+                <span>Cam kết & nổ lực</span>
+              </div>
+            )}
+            {this.state.isHovered === "page3" && (
+              <div
+                className="hovered-title"
+                style={{ left: "-210px", width: "230px", top: "100px" }}
+              >
+                <span>Nổ lực phát triển bền vững</span>
+              </div>
+            )}
+            {this.state.isHovered === "page4" && (
+              <div
+                className="hovered-title"
+                style={{ left: "-190px", top: "150px", width: "200px" }}
+              >
+                <span>Các trang web của P&G</span>
+              </div>
+            )}
+          </div>
+        )}
       </div>
     );
   }

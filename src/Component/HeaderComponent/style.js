@@ -14,7 +14,7 @@ export const WrapperButtonHeader = styled.div`
   border-radius: 25px;
   outline: none;
   overflow: hidden;
-  color: #3ea2f3;
+  color: #003da5;
   transition: color 0.3s 0.1s ease-out;
   text-align: center;
   width: 120px;
@@ -59,7 +59,7 @@ export const WrapperButtonSearch = styled.div`
   border-radius: 25px;
   outline: none;
   overflow: hidden;
-  color: #3ea2f3;
+  color: #003da5;
   transition: color 0.3s 0.1s ease-out;
   text-align: center;
   width: 100px;
@@ -93,7 +93,7 @@ export const WrapperButtonSearch = styled.div`
 export const WrapperLiHeader = styled.span`
   font-size: 16px;
   font-weight: 700;
-  color: #3ea2f3;
+  color: #003da5;
 `;
 export const WrapperSearchContainer = styled.div`
   position: relative !important;

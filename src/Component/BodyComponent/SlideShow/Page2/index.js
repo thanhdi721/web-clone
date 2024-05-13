@@ -13,4 +13,5 @@ export const WrapperTitle_2 = styled.div`
   line-height: 1.2;
   color: #003da5;
   text-align: center;
+  font-family: Montserrat, Arial, sans-serif;
 `;
