@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
 export const WrapperButtonHeader = styled.div`
+  margin-top: 10px !important;
+  margin: auto;
   background: transparent;
   position: relative !important;
-  padding: 5px 15px;
+  padding: 0px 10px;
   display: flex;
   align-items: center;
-  font-size: 17px;
+  font-size: 12px;
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
@@ -17,7 +19,7 @@ export const WrapperButtonHeader = styled.div`
   color: #003da5;
   transition: color 0.3s 0.1s ease-out;
   text-align: center;
-  width: 120px;
+  width: 99px;
 
   span {
     margin: 10px;
@@ -46,12 +48,15 @@ export const WrapperButtonHeader = styled.div`
   }
 `;
 export const WrapperButtonSearch = styled.div`
+  height: 33px;
+  margin-top: 10px !important;
+  right: 2vw;
   background: transparent;
-  position: relative !important;
-  padding: 5px 5px;
+  position: absolute !important;
+  padding: 0px 10px;
   display: flex;
   align-items: center;
-  font-size: 17px;
+  font-size: 12px;
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
@@ -62,7 +67,7 @@ export const WrapperButtonSearch = styled.div`
   color: #003da5;
   transition: color 0.3s 0.1s ease-out;
   text-align: center;
-  width: 100px;
+  width: 99px;
 
   span {
     margin: 10px;

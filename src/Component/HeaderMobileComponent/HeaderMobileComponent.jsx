@@ -111,7 +111,7 @@ function HeaderMobileComponent() {
             style={{ marginTop: "-10px" }}
           />
         </Col>
-        <Col span={11} style={{ textAlign: "end" }}>
+        <Col span={11} style={{ position: "absolute", right: "10vw" }}>
           <UnorderedListOutlined
             onClick={showDrawer}
             style={{ fontSize: "24px" }}
@@ -203,15 +203,6 @@ function HeaderMobileComponent() {
           </ul>
         </div>
         <div>
-          {/* <Row>
-            <Col span={5}></Col>
-            <Col span={1}></Col>
-            <Col span={1}></Col>
-            <Col span={1}></Col>
-            <Col span={1}></Col>
-            <Col span={1}></Col>
-            <Col span={5}></Col>
-          </Row> */}
           <ul
             style={{
               fontSize: "14px",

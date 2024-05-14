@@ -12,15 +12,10 @@
   right: 0;
   background-color: rgba(255, 255, 255, 1); /* Màu đen với độ trong suốt 0.5 */
   overflow: hidden;
-  width: 90%;
-  height: 0;
+  height: 40%;
+  width: 70%;
   transition: 0.5s ease;
   z-index: 99;
   border-top-right-radius: 50px;
   border-bottom-left-radius: 50px;
-}
-
-.image-container:hover .overlay_page-4mb {
-  height: 40%;
-  width: 70%;
 }
